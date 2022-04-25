@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  background-color: #D8EEFE;
+  width: 1150px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+h1 {
+  padding: 30px;
+  background-color: #D8EEFE;
+  color: #094067;
+  font-weight: 700;
+  font-size: 36px;
+}
+.kysymys {
+  background-color: white;
+  width: 870px;
+  height: fit-content;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  border: 10px solid white;
+
+}
+h2 {
+  font-size: 36px;
+  font-weight: 600;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  color: #094067;
+}
+.vastaus li {
+  display: inline-block;
+}
+.a {
+  font-size: 20px;
+  width: 150px;
+  border-bottom: 20px solid transparent;
+  color: #5F6C7B;
+}
+.nappi {
+  width: 150px;
+  accent-color: #EF4565;
+}
+.napit {
+  height: 40px;
+}
+.footer {
+  height: 200px;
+  background-color: #D8EEFE;
+}
+button {
+  background-color: #3DA9FC; color: #FFFFFE;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 30px;
+  top: 50px;
+  border: none;
+  position: relative;
+
+  cursor: pointer;
+  box-shadow:1px 2px #5F6C7B
+}
