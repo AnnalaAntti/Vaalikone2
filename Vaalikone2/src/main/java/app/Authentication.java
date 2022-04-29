@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 //The URI "/secretservlet" is needed in the filter class of his example application
-@WebServlet(urlPatterns = {"/secretservlet"})
+@WebServlet(urlPatterns = {"/Authentication"})
 public class Authentication extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) 
