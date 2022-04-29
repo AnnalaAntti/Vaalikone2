@@ -78,7 +78,7 @@ public class AuthFilter implements Filter {
         // this user does not have any password
         validUsers.put("nopass:","authorized");
         //The user is admin and the password is admin
-        validUsers.put("admin:admin","authorized");
+        validUsers.put("admin:admin123","authorized");
 	}
 
     protected boolean allowUser(String auth) throws IOException {
