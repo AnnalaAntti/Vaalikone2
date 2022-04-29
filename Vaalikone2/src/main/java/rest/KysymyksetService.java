@@ -37,7 +37,7 @@ public class KysymyksetService {
 	public List<Kysymys> readKysymys() {
 		EntityManager em=emf.createEntityManager();
 		em.getTransaction().begin();
-		List<Kysymys> list=em.createQuery("select kysymys from Kysymykset kysymys").getResultList();		
+		List<Kysymys> list=em.createQuery("select k from Kysymys k").getResultList();		
 		em.getTransaction().commit();
 		return list;
 	}	
@@ -49,7 +49,7 @@ public class KysymyksetService {
 	public void readAllFish(@Context HttpServletRequest request, @Context HttpServletResponse response) {
 		EntityManager em=emf.createEntityManager();
 		em.getTransaction().begin();
-		List<Kysymys> list=em.createQuery("select kysymys from Kysymykset kysymys").getResultList();		
+		List<Kysymys> list=em.createQuery("select k from Kysymys k").getResultList();		
 		em.getTransaction().commit();
 		RequestDispatcher rd=request.getRequestDispatcher("/jsp/readallkysymys.jsp");
 		request.setAttribute("kysymykset", list);
