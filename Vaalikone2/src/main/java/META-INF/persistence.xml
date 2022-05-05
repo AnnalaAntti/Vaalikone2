@@ -12,7 +12,7 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org
 <!--  
 	as a root user in the MySQL command prompt give the commands:
 	use performance_schema; 
-	GRANT SELECT ON performance_schema.session_variables TO root@localhost;
+	GRANT SELECT ON performance_schema.session_variables TO admin@localhost;
 	
 	Change admin to the username you are using below in the property jdbc.user.
 	 -->		
