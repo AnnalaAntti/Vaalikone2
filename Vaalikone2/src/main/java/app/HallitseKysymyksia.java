@@ -50,7 +50,7 @@ public class HallitseKysymyksia extends HttpServlet {
 	  case "/readtoupdatekysymys":
 		  Kysymys k=readtoupdatekysymys(request);
 		  request.setAttribute("kysymys", k);
-		  RequestDispatcher rd=request.getRequestDispatcher("./jsp/kysymystoupdateform.jsp");
+		  RequestDispatcher rd=request.getRequestDispatcher("./jsp/kysymystoupdate.jsp");
 		  rd.forward(request, response);
 		  return;
 	  }

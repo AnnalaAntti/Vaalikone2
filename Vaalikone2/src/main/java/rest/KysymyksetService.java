@@ -77,7 +77,7 @@ public class KysymyksetService {
 	@Path("/updatekysymys")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public List<Kysymys> updateFish(Kysymys kysymys) {
+	public List<Kysymys> updatekysymys(Kysymys kysymys) {
 		EntityManager em=emf.createEntityManager();
 		em.getTransaction().begin();
 		Kysymys k=em.find(Kysymys.class, kysymys.getId()); //select * from fish where id=fish.getId()
