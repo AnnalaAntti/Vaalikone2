@@ -26,7 +26,8 @@ import org.apache.commons.codec.binary.Base64;
 				DispatcherType.INCLUDE, 
 				DispatcherType.ERROR
 		}
-		, urlPatterns = {"/Authentication"})//Which URI's come through this filter
+		, urlPatterns = {"/Authentication", "/Kirjaudu.html"})//Which URI's come through this filter
+		 
 public class AuthFilter implements Filter {
 	/*
 	 * Attribute valiUsers, where the credentials of the valid users are added.
@@ -38,7 +39,7 @@ public class AuthFilter implements Filter {
     }
 
 	public void destroy() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub 
 	}
 
 	@Override
