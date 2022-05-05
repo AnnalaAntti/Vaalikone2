@@ -31,6 +31,7 @@ public class HallitseKysymyksia extends HttpServlet {
 		  doGet(request, response);
 	  }
 	  
+	  
 	  @Override
 	  public void doGet(HttpServletRequest request, HttpServletResponse response) 
 	      throws IOException, ServletException {
