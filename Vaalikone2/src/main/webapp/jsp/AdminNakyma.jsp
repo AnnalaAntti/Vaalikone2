@@ -30,8 +30,8 @@
 	<h2>Tervetuloa Admin näkymään</h2>
 	<br>
 	<div class="Napit">
-	<button>Ehdokas hallinta</button>
-	<button>Kysymys hallinta</button>
+	<button onclick="/ehdokashallinta">Ehdokas hallinta</button>
+	<button onclick="d">Kysymys hallinta</button>
 	</div>
 </body>
 </html>
