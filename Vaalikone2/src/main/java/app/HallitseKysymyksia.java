@@ -31,6 +31,7 @@ public class HallitseKysymyksia extends HttpServlet {
 		  doGet(request, response);
 	  }
 	  
+	  
 	  @Override
 	  public void doGet(HttpServletRequest request, HttpServletResponse response) 
 	      throws IOException, ServletException {
@@ -70,14 +71,14 @@ public class HallitseKysymyksia extends HttpServlet {
 
 	private List<Kysymys> addkysymys(HttpServletRequest request) {
 		//A Fish object to send to our web-service 
-		Kysymys f=new Kysymys(request.getParameter("kysymys"), request.getParameter("numero"));
-		System.out.println(f);
+		Kysymys k=new Kysymys(request.getParameter("kysymys"), request.getParameter("numero"));
+		System.out.println(k);
 		String uri = "http://127.0.0.1:8080/rest/kysymyksetservice/addkysymys";
 		Client c=ClientBuilder.newClient();
 		WebTarget wt=c.target(uri);
 		Builder b=wt.request();
 		//Here we create an Entity of a Fish object as JSON string format
-		Entity<Kysymys> e=Entity.entity(f,MediaType.APPLICATION_JSON);
+		Entity<Kysymys> e=Entity.entity(k,MediaType.APPLICATION_JSON);
 		//Create a GenericType to be able to get List of objects
 		//This will be the second parameter of post method
 		GenericType<List<Kysymys>> genericList = new GenericType<List<Kysymys>>() {};
@@ -103,14 +104,14 @@ public class HallitseKysymyksia extends HttpServlet {
 	
 	private List<Kysymys> updatekysymys(HttpServletRequest request) {
 		//A Fish object to send to our web-service 
-		Kysymys f=new Kysymys(request.getParameter("id"), request.getParameter("kysymys"), request.getParameter("numero"));
-		System.out.println(f);
+		Kysymys k=new Kysymys(request.getParameter("id"), request.getParameter("kysymys"), request.getParameter("numero"));
+		System.out.println(k);
 		String uri = "http://127.0.0.1:8080/rest/kysymyksetservice/updatekysymys";
 		Client c=ClientBuilder.newClient();
 		WebTarget wt=c.target(uri);
 		Builder b=wt.request();
 		//Here we create an Entity of a Fish object as JSON string format
-		Entity<Kysymys> e=Entity.entity(f,MediaType.APPLICATION_JSON);
+		Entity<Kysymys> e=Entity.entity(k,MediaType.APPLICATION_JSON);
 		//Create a GenericType to be able to get List of objects
 		//This will be the second parameter of post method
 		GenericType<List<Kysymys>> genericList = new GenericType<List<Kysymys>>() {};

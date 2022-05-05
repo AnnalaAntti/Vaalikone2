@@ -51,7 +51,7 @@ public class Kysymys {
 	public String getKysymys() {
 		return kysymys;
 	}
-	public void setKysymys(String breed) {
+	public void setKysymys(String kysymys) {
 		this.kysymys = kysymys;
 	}
 	public int getNumero() {
