@@ -2,10 +2,9 @@
 	pageEncoding="UTF-8"%>
 
 <%@ page import="java.util.ArrayList"%>
-<%@ page import="data.Ehdokas"%>
+
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,7 +30,7 @@
 	<br>
 	<div class="Napit">
 	<button onclick="/ehdokashallinta">Ehdokas hallinta</button>
-	<button onclick="d">Kysymys hallinta</button>
+	<button onclick="/readallkysymys">Kysymys hallinta</button>
 	</div>
 </body>
 </html>
