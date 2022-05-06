@@ -26,7 +26,7 @@ import org.apache.commons.codec.binary.Base64;
 				DispatcherType.INCLUDE, 
 				DispatcherType.ERROR
 		}
-		, urlPatterns = {"/Authentication", "/Kirjaudu.html"})//Which URI's come through this filter
+		, urlPatterns = {"/Authentication", "/AdminNakyma"})//Which URI's come through this filter
 		 
 public class AuthFilter implements Filter {
 	/*
