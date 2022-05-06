@@ -14,7 +14,7 @@
 <input type='submit' name='ok' value='OK'>
 </form>
 <ol>
-<c:forEach var="kysymys" items="${requestScope.kysymykset }">
+<c:forEach var="kysymys" items="${requestScope.kysymykset}">
 	<li>${kysymys} <a href='/rest/kysymyksetservice/deletekysymys/${kysymys.id}'>Delete</a> <a href='../readtoupdatekysymys?id=${kysymys.id}'>Update</a>
 </c:forEach>
 </ol>

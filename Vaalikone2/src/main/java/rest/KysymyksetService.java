@@ -46,7 +46,7 @@ public class KysymyksetService {
 	@Path("/readallkysymys")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public void readAllFish(@Context HttpServletRequest request, @Context HttpServletResponse response) {
+	public void readAllKysymys(@Context HttpServletRequest request, @Context HttpServletResponse response) {
 		EntityManager em=emf.createEntityManager();
 		em.getTransaction().begin();
 		List<Kysymys> list=em.createQuery("select k from Kysymys k").getResultList();		
@@ -77,7 +77,7 @@ public class KysymyksetService {
 	@Path("/updatekysymys")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public List<Kysymys> updateFish(Kysymys kysymys) {
+	public List<Kysymys> updatekysymys(Kysymys kysymys) {
 		EntityManager em=emf.createEntityManager();
 		em.getTransaction().begin();
 		Kysymys k=em.find(Kysymys.class, kysymys.getId()); //select * from fish where id=fish.getId()
@@ -123,7 +123,7 @@ public class KysymyksetService {
 		//Calling the method readFish() of this service
 		List<Kysymys> list=readKysymys();		
 		
-		RequestDispatcher rd=request.getRequestDispatcher("/jsp/kysymysform.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("/jsp/kysymysyllapito.jsp");
 		request.setAttribute("kysymykset", list);
 		try {
 			rd.forward(request, response);
@@ -142,5 +142,24 @@ public class KysymyksetService {
 		Kysymys k=em.find(Kysymys.class, id);
 		em.getTransaction().commit();
 		return k;
+	}
+	@GET
+	@Path("/kysymysyllapito")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void YllapitoKysymys(@Context HttpServletRequest request, @Context HttpServletResponse response) {
+		EntityManager em=emf.createEntityManager();
+		em.getTransaction().begin();
+		List<Kysymys> list=em.createQuery("select k from Kysymys k").getResultList();		
+		em.getTransaction().commit();
+		RequestDispatcher rd=request.getRequestDispatcher("/jsp/kysymysyllapito.jsp");
+		request.setAttribute("kysymykset", list);
+		try {
+			rd.forward(request, response);
+		} catch (ServletException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}	
+
 }
