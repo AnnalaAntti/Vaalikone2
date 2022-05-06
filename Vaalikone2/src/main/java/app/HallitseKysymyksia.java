@@ -22,7 +22,7 @@ import javax.ws.rs.core.MediaType;
 
 import data.Kysymys;
 
-@WebServlet(urlPatterns = {"/addkysymys", "/deletekysymys","/updatekysymys","/readkysymys","/readtoupdatekysymys"})
+@WebServlet(urlPatterns = {"/addkysymys", "/deletekysymys","/updatekysymys","/readkysymys","/readtoupdatekysymys","/kysymysyllapito"})
 public class HallitseKysymyksia extends HttpServlet {
 
 	  @Override
@@ -47,6 +47,8 @@ public class HallitseKysymyksia extends HttpServlet {
 		  list=updatekysymys(request);break;
 	  case "/readkysymys":
 		  list=readkysymys(request);break;
+	  case "/kysymysyllapito":
+		  list=readkysymys(request);break;
 	  case "/readtoupdatekysymys":
 		  Kysymys k=readtoupdatekysymys(request);
 		  request.setAttribute("kysymys", k);
@@ -55,7 +57,7 @@ public class HallitseKysymyksia extends HttpServlet {
 		  return;
 	  }
 	  request.setAttribute("kysymykset", list);
-	  RequestDispatcher rd=request.getRequestDispatcher("./jsp/kysymysform.jsp");
+	  RequestDispatcher rd=request.getRequestDispatcher("./jsp/kysymysyllapito.jsp");
 	  rd.forward(request, response);
   }
 
@@ -135,4 +137,17 @@ public class HallitseKysymyksia extends HttpServlet {
 		List<Kysymys> returnedList=b.delete(genericList);
 		return returnedList;
 	}
+	private List<Kysymys> kysymysyllapito(HttpServletRequest request) {
+		String id=request.getParameter("id");
+		String uri = "http://127.0.0.1:8080/rest/kysymyksetservice/kysymysyllapito";
+		Client c=ClientBuilder.newClient();
+		WebTarget wt=c.target(uri);
+		Builder b=wt.request();
+		//Create a GenericType to be able to get List of objects
+		//This will be the second parameter of post method
+		GenericType<List<Kysymys>> genericList = new GenericType<List<Kysymys>>() {};
+		
+		List<Kysymys> returnedList=b.get(genericList);
+		return returnedList;
+}
 }

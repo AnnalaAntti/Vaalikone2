@@ -70,6 +70,6 @@ public class Kysymys {
 		}
 	}
 	public String toString() {
-		return this.id+": "+this.kysymys+" / "+this.numero;
+		return this.id+": "+this.kysymys+": "+this.numero;
 	}
 }
