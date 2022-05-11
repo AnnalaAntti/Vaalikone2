@@ -9,6 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="css/header.css">
 <title>Admin</title>
 
 <link rel="stylesheet" type="text/css" href="mycssfilesomewhere.css">
@@ -26,11 +27,8 @@
     </nav>
   </header>
 <body>
-	<h2>Tervetuloa Admin näkymään</h2>
+	<a href='/yllapito'>Ehdokas Hallinta</a>
+	<a href='/kysymysyllapito'>Kysymys hallinta</a>
 	<br>
-	<div class="Napit">
-	<button onclick="/ehdokashallinta">Ehdokas hallinta</button>
-	<button onclick="/readallkysymys">Kysymys hallinta</button>
-	</div>
 </body>
 </html>
