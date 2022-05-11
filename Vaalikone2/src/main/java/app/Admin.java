@@ -17,7 +17,7 @@ public class Admin extends HttpServlet {
       throws IOException, ServletException {
     response.setContentType("text/plain;utf-8");
     PrintWriter out=response.getWriter();
-    out.print("Tervetuloa admin näkymään!");
+    out.print("Tervetuloa admin n&auml;kym&auml;&auml;n!");
     
 	RequestDispatcher rd=request.getRequestDispatcher("/jsp/AdminNakyma.jsp");
 	rd.forward(request, response);
