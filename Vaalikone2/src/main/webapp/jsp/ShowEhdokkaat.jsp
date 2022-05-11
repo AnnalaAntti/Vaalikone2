@@ -24,7 +24,7 @@
 				<li><a href="index.html">KOTISIVU</a></li>
 				<li><a href="Kysymykset.html">VASTAA KYSYMYKSIIN</a></li>
 				<li><a href='/naytaehdokas' class="active">SELAA EHDOKKAITA</a></li>
-				<li><a href="Kirjaudu.html">KIRJAUDU</a></li>
+				<li><a href="/AdminNakyma">KIRJAUDU</a></li>
 			</ul>
 		</nav>
 	</header>
