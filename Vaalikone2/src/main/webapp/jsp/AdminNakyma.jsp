@@ -28,6 +28,8 @@
   </header>
 <body>
 	<a href='/yllapito'>Ehdokas Hallinta</a>
+	<br>
+	<br>
 	<a href='/kysymysyllapito'>Kysymys hallinta</a>
 	<br>
 </body>
